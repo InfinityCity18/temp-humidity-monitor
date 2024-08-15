@@ -1,6 +1,6 @@
-{
-  "version": 1,
-  "author": "The Bin - Hack Club",
+{ 
+"version": 1,
+  "author": "InfinityCity18",
   "editor": "wokwi",
   "parts": [
     {
@@ -29,8 +29,8 @@
     {
       "type": "wokwi-photoresistor-sensor",
       "id": "wokwi-photoresistor-sensor-0",
-      "top": 278.1,
-      "left": -207.1,
+      "top": 287.7,
+      "left": -226.3,
       "rotate": 90,
       "attrs": {}
     },
