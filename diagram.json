@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "author": "The Bin - Hack Club",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": 279.85,
+      "left": -0.85,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "wokwi-dht22-0",
+      "top": 134.7,
+      "left": 33,
+      "attrs": { "temperature": "-40", "humidity": "39" }
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "wokwi-pir-motion-sensor-0",
+      "top": 489.6,
+      "left": -54.82,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "wokwi-photoresistor-sensor-0",
+      "top": 278.1,
+      "left": -207.1,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "wokwi-lcd1602-0",
+      "top": 281.83,
+      "left": 140.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 426.35,
+      "left": 316.8,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:3V3", "wokwi-dht22-0:VCC", "red", [ "v-77.11" ] ],
+    [ "wokwi-dht22-0:GND", "pico:GND.8", "black", [ "v9.6", "h-115.2" ] ],
+    [ "wokwi-dht22-0:SDA", "pico:GP28", "cyan", [ "v19.2", "h-47.9" ] ],
+    [ "pico:GND.1", "wokwi-photoresistor-sensor-0:GND", "black", [ "v19.2", "h-76.8" ] ],
+    [ "pico:3V3", "wokwi-photoresistor-sensor-0:VCC", "red", [ "v-19.51", "h-76.8", "v67.2" ] ],
+    [ "wokwi-photoresistor-sensor-0:DO", "pico:GP2", "gold", [ "v48", "h106.2" ] ],
+    [ "wokwi-pir-motion-sensor-0:OUT", "pico:GP3", "blue", [ "v0" ] ],
+    [
+      "pico:3V3",
+      "wokwi-pir-motion-sensor-0:VCC",
+      "red",
+      [ "v-9.91", "h-57.6", "v115.2", "h67.2" ]
+    ],
+    [ "pico:GND.1", "wokwi-pir-motion-sensor-0:GND", "black", [ "v0" ] ],
+    [ "pico:GP12", "wokwi-lcd1602-0:RS", "purple", [ "v19.2", "h105.64" ] ],
+    [ "wokwi-lcd1602-0:E", "pico:GP11", "magenta", [ "v28.8", "h-134.4" ] ],
+    [ "wokwi-lcd1602-0:D4", "pico:GP10", "green", [ "v38.4", "h-192" ] ],
+    [ "wokwi-lcd1602-0:D5", "pico:GP9", "yellow", [ "v48", "h-211.1" ] ],
+    [ "wokwi-lcd1602-0:D6", "pico:GP8", "blue", [ "v57.6", "h-239.8" ] ],
+    [ "wokwi-lcd1602-0:D7", "pico:GP7", "violet", [ "v67.2", "h-258.9" ] ],
+    [ "pico:GND.4", "wokwi-lcd1602-0:VSS", "black", [ "v9.6", "h0.04" ] ],
+    [ "pico:GND.4", "wokwi-lcd1602-0:K", "black", [ "v9.6", "h201.64" ] ],
+    [ "pico:GND.4", "wokwi-lcd1602-0:RW", "black", [ "v9.6", "h96.04" ] ],
+    [ "r1:1", "wokwi-lcd1602-0:A", "red", [ "v0", "h-9.6" ] ],
+    [ "pico:3V3", "wokwi-lcd1602-0:VDD", "red", [ "v-9.91", "h38.4", "v153.6", "h163.2" ] ],
+    [ "pico:3V3", "r1:2", "red", [ "v-9.91", "h38.4", "v153.6", "h355.2" ] ]
+  ],
+  "dependencies": {}
+}
