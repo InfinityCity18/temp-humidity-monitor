@@ -16,8 +16,8 @@ LiquidCrystal lcd(2,3,4,5,6,7);
 //IPAddress server(10,69,69,52);
 WiFiClientSecure client;
 
-char ssid[] = "AP"; // your network SSID (name)
-char pass[] = "45424618"; // your network password
+char ssid[] = "*"; // your network SSID (name)
+char pass[] = "*"; // your network password
 
 const char* host = "homemonitorserver.local.hyperbarq.win";
 
