@@ -19,7 +19,7 @@ WiFiClientSecure client;
 char ssid[] = "*"; // your network SSID (name)
 char pass[] = "*"; // your network password
 
-const char* host = "homemonitorserver.local.hyperbarq.win";
+const char* host = "*";
 
 struct PostData {
     bool motion_detected;
