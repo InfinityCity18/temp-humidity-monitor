@@ -4,11 +4,11 @@
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
 
-#define DHTPIN 17
+#define DHTPIN 22
 #define LDR_PIN 16
 #define DHTTYPE DHT11
-#define MOTION_PIN 19
-#define BACKLIGHT_PIN 18
+#define MOTION_PIN 14
+#define BACKLIGHT_PIN 15
 #define PORT 443
 
 DHT dht(DHTPIN, DHTTYPE);
