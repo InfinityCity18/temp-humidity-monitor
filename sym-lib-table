@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "homemon")(type "KiCad")(uri "${KIPRJMOD}/homemon.kicad_sym")(options "")(descr ""))
+)
